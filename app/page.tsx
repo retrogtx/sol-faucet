@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import supabase from "../supabase/client";
 import { User } from '@supabase/supabase-js';
-import Button from '@/components/Button';
+import Button from './Button';
 
 export default function Home() {
   const [user, setUser] = useState<User | null>(null);
