@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import supabase from '../../supabase/client';
+import supabase from '../../../supabase/client';
 
 export default function AuthCallback() {
   const router = useRouter();
@@ -8,7 +8,7 @@ export default function AuthCallback() {
   useEffect(() => {
     const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN' && session) {
-        router.push('/');
+        router.push('/landing');
       }
     });
 
