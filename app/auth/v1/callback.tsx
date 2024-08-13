@@ -8,7 +8,7 @@ export default function AuthCallback() {
   useEffect(() => {
     const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN' && session) {
-        router.push('/landing');
+        router.push('/profile');
       }
     });
 

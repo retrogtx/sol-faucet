@@ -28,7 +28,7 @@ export default function Landing() {
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'github',
         options: {
-          redirectTo: window.location.origin + '/auth/v1/callback.tsx'
+          redirectTo: window.location.origin + '/profile'
         }
       });
       if (error) throw error;
@@ -69,7 +69,7 @@ export default function Landing() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="space-y-6">
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                Solve bounties. Get paid. Available in Kashmir.
+                Solve bounties. Get paid. Available in Kashmir too.
               </h1>
               <p className="text-muted-foreground">
               Get paid through crypto so that even Kashmiris get access to it.
