@@ -41,7 +41,7 @@ export default function Home() {
         </>
       ) : (
         <div className='text-center'>
-          <h1 className='mb-3'>Welcome to the Web3 Bounty Facilitator</h1>
+          <h1 className='mb-3'>Welcome to the Web3 Bounty Facilitator, an important tool to get paid through crypto so that even Kashmiris get access to it.</h1>
           <Button  onClick={signInWithGithub}>Sign in with GitHub</Button>
         </div>
       )}
