@@ -49,7 +49,7 @@ const Faucet = () => {
       console.log(err);
       toast({
         title: "Airdrop failed!",
-        description: `Please try again later.`
+        description: `Too many transactions, please try again in 1D.`
       });
       return false;
     }
@@ -63,13 +63,12 @@ const Faucet = () => {
     <div className="flex items-center justify-center min-h-screen">
       <div className="flex flex-col items-center justify-between rounded-lg border p-3 shadow-sm space-y-4">
         <div className="space-y-0.5">
-          <label className="form-label">TestNet</label>
+          <label className="form-label">1 Sol in 1 Day</label>
         </div>
         <Switch checked={isTestNet} onCheckedChange={handleSwitchChange} />
         <Input placeholder="enter solana address" value={address} onChange={(e) => setAddress(e.target.value)} />
         <div className="mt-4 p-2 border rounded">
-          <p><strong>Address:</strong> {address}</p>
-          <p><strong>TestNet:</strong> {isTestNet ? "Enabled" : "Disabled"}</p>
+          <p>{isTestNet ? "TestNet" : "DevNet"}</p>
         </div>
         <Button disabled={!isValid} onClick={handleRequestAirdrop}>Request</Button>
       </div>
