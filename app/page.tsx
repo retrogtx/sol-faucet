@@ -27,12 +27,13 @@ const FloatingParticle = ({ index }: { index: number }) => {
 
   return (
     <div
-      className="absolute rounded-full bg-gray-500 opacity-20"
+      className="absolute rounded-full bg-white opacity-90"
       style={{
         left: `${position.x}%`,
         top: `${position.y}%`,
         width: `${size}px`,
         height: `${size}px`,
+        zIndex: 1,
       }}
     />
   )
@@ -43,10 +44,12 @@ export default function Component() {
   const [particles] = useState(Array.from({ length: 50 }, (_, i) => i))
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100 relative overflow-hidden">
-      {particles.map((index) => (
-        <FloatingParticle key={index} index={index} />
-      ))}
+    <div className="flex flex-col min-h-screen bg-gray-950 text-gray-100 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        {particles.map((index) => (
+          <FloatingParticle key={index} index={index} />
+        ))}
+      </div>
       <header className="px-4 lg:px-6 h-14 flex items-center border-b border-gray-800 relative z-10">
         <Link className="flex items-center justify-center" href="#">
           <svg className="h-6 w-6" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +65,7 @@ export default function Component() {
           </Link>
           <Button className="text-sm font-medium hover:text-gray-400"  onClick={() => {
             toast({
-              description: "Your message has been sent.",
+              description: "Coming soon. Use our other tools until then!",
             })
           }}>
             Other Tools
@@ -198,7 +201,7 @@ export default function Component() {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-800 relative z-10">
-        <p className="text-xs text-gray-400">© 2023 Solana Dev Tools. All rights reserved.</p>
+        <p className="text-xs text-gray-400">© 2024 Solana Dev Tools. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4 text-gray-400 hover:text-gray-100" href="https://x.com/amritwt">
             Twitter
