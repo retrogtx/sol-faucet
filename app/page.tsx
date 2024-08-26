@@ -58,9 +58,9 @@ export default function Component() {
           <span className="sr-only">Solana Dev Tools</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link href="/features">
+          <Link href="/faq">
           <Button className="text-sm font-medium hover:text-gray-400">
-            Features
+            FAQ
           </Button>
           </Link>
           <Button className="text-sm font-medium hover:text-gray-400"  onClick={() => {
