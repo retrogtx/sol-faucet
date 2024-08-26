@@ -37,7 +37,7 @@ export default function FAQAccordion() {
             What are some upcoming tools?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400 bg-gray-700 p-4 rounded-lg">
-            In the near future, I'm planning to add a playground, a token minting tool as I hone my skills throughout the cohort.
+            In the near future, I&apos;m planning to add a playground, a token minting tool as I hone my skills throughout the cohort.
           </AccordionContent>
         </AccordionItem>
 
